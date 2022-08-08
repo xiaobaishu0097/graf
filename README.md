@@ -29,6 +29,17 @@ conda env create -f environment.yml
 conda activate graf
 ```
 
+In order to upgrade torch, you need to uninstall torch first with
+```
+pip uninstall torch
+```
+Then, upgrade all installed packages and install the latest pytorch using
+```
+conda update --all
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+```
+
+
 Next, for nerf-pytorch install torchsearchsorted. Note that this requires `torch>=1.4.0` and `CUDA >= v10.1`.
 You can install torchsearchsorted via
 ``` 
